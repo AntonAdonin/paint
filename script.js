@@ -12,7 +12,7 @@ cnv.onmousedown = (e) => {
     ctx.fillRect(e.offsetX-width/2, event.offsetY-width/2, width, width)  
     cnv.onmousemove = (event) => {
         ctx.fillStyle = color;
-        ctx.fillRect(event.offsetX-width/2, event.offsetY-width/2, width**3, width**3)
+        ctx.fillRect(event.offsetX-width/2, event.offsetY-width/2, width, width)
     }
 }
 
