@@ -62,6 +62,16 @@ cnv.onmousedown = (e) => {
         cnv.onmousemove = null;
     };
 }
+
+cnv.ontouchmove = (event) => {
+    if(tool == "Кисточка"){
+        ctx.fillStyle = color;
+        ctx.fillRect(event.changedTouches[0].pageX - width/2, event.changedTouches[0].pageY- width/2, width, width);
+    }else{
+        ctx.clearRect(event.changedTouches[0].pageX - width/2, event.changedTouches[0].pageY- width/2, width, width);
+    }
+
+}
 // ждем событие изменения цвета палитры заднего фона
 background.addEventListener('input', changeBackground);
 function changeBackground(){
